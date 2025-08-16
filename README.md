@@ -8,11 +8,11 @@ First, make sure you have an [Android build environment](https://source.android.
 
 Initialize local repository:
 ```
-repo init -u https://github.com/Neoteric-OS/android_manifest -b bka
+repo init -u https://github.com/CLO-Ext/manifest -b bka
 ```
 Alternateively, shallow clone everything to save a lot of space,
 ```
-repo init --depth=1 -u https://github.com/Neoteric-OS/android_manifest -b bka
+repo init --depth=1 -u https://github.com/CLO-Ext/manifest -b bka
 ```
 
 Then sync:
