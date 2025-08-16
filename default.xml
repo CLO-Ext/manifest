@@ -69,6 +69,10 @@
            fetch="https://gitea.com/Neoteric-OS"
            revision="refs/heads/bka" /> 
 
+  <remote  name="ext"
+           fetch="https://github.com/CLO-Ext"
+           revision="refs/heads/bka" />
+
   <include name="neoteric.xml"/>
   <include name="internal.xml" />
 

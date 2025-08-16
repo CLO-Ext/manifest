@@ -3,7 +3,7 @@
 
   <!-- Build -->
   <remove-project name="platform/build_repo" />
-  <project path="build/make" name="android_build" remote="neoteric" >
+  <project path="build/make" name="android_build" remote="ext" >
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
     <linkfile src="core" dest="build/core" />
@@ -12,7 +12,7 @@
     <linkfile src="tools" dest="build/tools" />
   </project>
   <remove-project name="platform/build/soong" />
-  <project path="build/soong" name="android_build_soong" remote="neoteric" >
+  <project path="build/soong" name="android_build_soong" remote="ext" >
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
@@ -21,7 +21,7 @@
   <remove-project name="platform/art" />
   <project path="art" name="android_art" remote="neoteric" />
   <remove-project name="platform/bionic" />
-  <project path="bionic" name="android_bionic" remote="neoteric" />
+  <project path="bionic" name="android_bionic" remote="ext" />
 
   <!-- Bootable -->
   <project path="bootable/deprecated-ota" name="android_bootable_deprecated-ota" remote="neoteric" />
@@ -31,7 +31,7 @@
   <!-- Device -->
   <remove-project name="device/qcom/common" />
   <remove-project name="device/qcom/sepolicy_vndr" />
-  <project path="device/qcom/common" name="android_device_qcom_common" remote="neoteric">
+  <project path="device/qcom/common" name="android_device_qcom_common" remote="ext">
     <linkfile dest="vendor/qcom/build/tasks/generate_extra_images.mk" src="generate_extra_images.mk" />
     <!-- add guards for CAF repositories -->
     <linkfile src="os_pickup_sepolicy_vndr.mk" dest="device/qcom/sepolicy_vndr/SEPolicy.mk" />
@@ -84,16 +84,18 @@
   <project path="external/tinycompress" name="android_external_tinycompress" remote="neoteric" />
   <remove-project name="platform/external/bouncycastle" />
   <project path="external/bouncycastle" name="android_external_bouncycastle" remote="neoteric" />
+  <remove-project name="platform/external/jemalloc_new" />
+  <project path="external/jemalloc_new" name="android_external_jemalloc-new" remote="ext" />
 
   <!-- Frameworks -->
   <remove-project name="platform/frameworks/av" />
   <project path="frameworks/av" name="android_frameworks_av" remote="neoteric" />
   <remove-project name="platform/frameworks/base" />
-  <project path="frameworks/base" name="android_frameworks_base" remote="neoteric" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="ext" />
   <remove-project name="platform/frameworks/libs/systemui" />
   <project path="frameworks/libs/systemui" name="android_frameworks_libs_systemui" remote="neoteric" />
   <remove-project name="platform/frameworks/native" />
-  <project path="frameworks/native" name="android_frameworks_native" remote="neoteric" />
+  <project path="frameworks/native" name="android_frameworks_native" remote="ext" />
   <remove-project name="platform/frameworks/opt/telephony" />
   <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="neoteric" />
 
@@ -117,7 +119,7 @@
 
   <!-- Packages -->
   <remove-project name="platform/packages/apps/Settings" />
-  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="neoteric" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="ext" />
   <remove-project name="platform/packages/apps/Launcher3"/>
   <project path="packages/apps/Launcher3" name="android_packages_apps_Launcher3" remote="neoteric" />
   <remove-project name="platform/packages/apps/ThemePicker"/>
@@ -148,7 +150,7 @@
   <remove-project name="platform/system/bpf" />
   <project path="system/bpf" name="android_system_bpf" remote="neoteric" />
   <remove-project name="platform/system/core" />
-  <project path="system/core" name="android_system_core" remote="neoteric" />
+  <project path="system/core" name="android_system_core" remote="ext" />
   <remove-project name="platform/system/sepolicy" />
   <project path="system/sepolicy" name="android_system_sepolicy" remote="neoteric" />
   <remove-project name="platform/system/netd" />
@@ -159,10 +161,10 @@
   <project path="tools/extract-utils" name="android_tools_extract-utils" remote="neoteric" />
 
   <!-- Vendor (Neoteric) -->
-  <project path="vendor/neoteric" name="android_vendor_neoteric" remote="neoteric" />
+  <project path="vendor/neoteric" name="android_vendor_neoteric" remote="ext" />
   <project path="vendor/neoteric_prebuilt" name="android_vendor_neoteric_prebuilt" remote="neoteric" />
   <project path="vendor/gms" name="android_vendor_gms" remote="neoteric-gitea" clone-depth="1" />
-  <project path="vendor/qcom/common" name="proprietary_vendor_qcom_common" remote="neoteric" />
+  <project path="vendor/qcom/common" name="proprietary_vendor_qcom_common" remote="ext" />
   <project path="vendor/qcom/sdclang" name="proprietary_vendor_qcom_sdclang" remote="blobs" revision="disabled" />
   <project path="vendor/themes" name="android_vendor_themes" remote="neoteric" />
   <project path="vendor/preferences" name="android_vendor_preferences" remote="neoteric" />
