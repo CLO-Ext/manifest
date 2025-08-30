@@ -161,7 +161,7 @@
   <project path="tools/extract-utils" name="android_tools_extract-utils" remote="neoteric" />
 
   <!-- Vendor (Neoteric) -->
-  <project path="vendor/neoteric" name="android_vendor_neoteric" remote="neoteric" />
+  <project path="vendor/neoteric" name="android_vendor_neoteric" remote="ext" />
   <project path="vendor/neoteric_prebuilt" name="android_vendor_neoteric_prebuilt" remote="neoteric" />
   <project path="vendor/gms" name="android_vendor_gms" remote="neoteric-gitea" clone-depth="1" />
   <project path="vendor/qcom/common" name="proprietary_vendor_qcom_common" remote="neoteric" />
