@@ -31,7 +31,7 @@
   <!-- Device -->
   <remove-project name="device/qcom/common" />
   <remove-project name="device/qcom/sepolicy_vndr" />
-  <project path="device/qcom/common" name="android_device_qcom_common" remote="neoteric">
+  <project path="device/qcom/common" name="android_device_qcom_common" remote="ext">
     <linkfile dest="vendor/qcom/build/tasks/generate_extra_images.mk" src="generate_extra_images.mk" />
     <!-- add guards for CAF repositories -->
     <linkfile src="os_pickup_sepolicy_vndr.mk" dest="device/qcom/sepolicy_vndr/SEPolicy.mk" />
